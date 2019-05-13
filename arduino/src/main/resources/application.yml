@@ -1,0 +1,16 @@
+server:
+  port: 8085
+  context-path: /arduino
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/arduino
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: cja
+mybatis:
+  type-aliases-package: com.arduino.entity
+  mapper-locations: classpath:edu/zzu/mapper/*Mapper.xml
